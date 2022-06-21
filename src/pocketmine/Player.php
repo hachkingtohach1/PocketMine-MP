@@ -163,6 +163,7 @@ use pocketmine\network\mcpe\protocol\types\inventory\UseItemOnEntityTransactionD
 use pocketmine\network\mcpe\protocol\types\inventory\UseItemTransactionData;
 use pocketmine\network\mcpe\protocol\types\NetworkInventoryAction;
 use pocketmine\network\mcpe\protocol\types\PersonaPieceTintColor;
+use pocketmine\network\mcpe\protocol\ToastRequestPacket;
 use pocketmine\network\mcpe\protocol\types\PersonaSkinPiece;
 use pocketmine\network\mcpe\protocol\types\PlayerMovementSettings;
 use pocketmine\network\mcpe\protocol\types\PlayerMovementType;
