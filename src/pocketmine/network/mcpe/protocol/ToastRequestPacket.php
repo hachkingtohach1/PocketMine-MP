@@ -30,9 +30,8 @@ use pocketmine\network\mcpe\NetworkSession;
 class ToastRequestPacket extends DataPacket{
 	public const NETWORK_ID = ProtocolInfo::TOAST_REQUEST_PACKET;
 
-	/** @var string  */
 	public string $title = "";
-	/** @var string  */
+
 	public string $content = "";
 
 	protected function decodePayload(){
@@ -48,4 +47,4 @@ class ToastRequestPacket extends DataPacket{
 	public function handle(NetworkSession $session) : bool{
 		return $session->handleToastRequest($this);
 	}
-} 
+}
