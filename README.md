@@ -3,7 +3,7 @@ A server software for Minecraft: BE. This is a SPOON of [PocketMine-MP](https://
 <p align="center">
 	<img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/Wolf-MC/WolfMC?label=release&sort=semver">
 	<a href="https://hub.docker.com/r/pmmp/pocketmine-mp"><img src="https://img.shields.io/docker/v/pmmp/pocketmine-mp?logo=docker&label=image" alt="Docker image version (latest semver)" /></a>
-</p>
+</p>.
 
 ## Getting started
 - [Documentation](http://pmmp.readthedocs.org/)
