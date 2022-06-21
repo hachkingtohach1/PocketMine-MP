@@ -45,10 +45,10 @@ jobs:
       - name: Minify BedrockData JSON files
         run: php vendor/pocketmine/bedrock-data/.minify_json.php
 
-      - name: Build PocketMine-MP.phar
+      - name: Build WolfMC.phar
         run: php -dphar.readonly=0 build/server-phar.php --git ${{ github.sha }} --build ${{ steps.build-number.outputs.BUILD_NUMBER }}
 
-      - name: Get PocketMine-MP release version
+      - name: Get WolfMC release version
         id: get-pm-version
         run: |
           echo ::set-output name=PM_VERSION::$(php -r 'require "vendor/autoload.php"; echo \pocketmine\VersionInfo::BASE_VERSION;')
@@ -64,17 +64,17 @@ jobs:
         with:
           name: release_artifacts
           path: |
-            ${{ github.workspace }}/PocketMine-MP.phar
+            ${{ github.workspace }}/WolfMC.phar
             ${{ github.workspace }}/start.*
             ${{ github.workspace }}/build_info.json
 
       - name: Create draft release
         uses: ncipollo/release-action@v1.10.0
         with:
-          artifacts: ${{ github.workspace }}/PocketMine-MP.phar,${{ github.workspace }}/start.*,${{ github.workspace }}/build_info.json
+          artifacts: ${{ github.workspace }}/WolfMC.phar,${{ github.workspace }}/start.*,${{ github.workspace }}/build_info.json
           commit: ${{ github.sha }}
           draft: true
-          name: PocketMine-MP ${{ steps.get-pm-version.outputs.PM_VERSION }}
+          name: WolfMC ${{ steps.get-pm-version.outputs.PM_VERSION }}
           tag: ${{ steps.get-pm-version.outputs.PM_VERSION }}
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
